@@ -1,0 +1,41 @@
+﻿@model BDProjeto.Dominio.Usuario
+
+@{
+    ViewBag.Title = "Detalhe do Usuário";
+}
+
+<h2>Detalhe do Usuário</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <hr />
+        <dt>
+            @Html.DisplayNameFor(model => model.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cargo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cargo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.data)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Alterar Usuário", "Alterar", new { id = Model.Id }, new { @class = "btn btn-warning" }) |
+    @Html.ActionLink("Listar Usuários", "Listar", null, new { @class = "btn btn-secondary" })
+</p>
